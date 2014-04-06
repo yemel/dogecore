@@ -1,13 +1,13 @@
 'use strict';
 
 var chai = chai || require('chai');
-var bitcore = bitcore || require('../bitcore');
+var dogecore = dogecore || require('../dogecore');
 
 var should = chai.should();
 
-var ScriptModule = bitcore.Script;
-var Address = bitcore.Address;
-var networks = bitcore.networks;
+var ScriptModule = dogecore.Script;
+var Address = dogecore.Address;
+var networks = dogecore.networks;
 var Script;
 var testdata = testdata || require('./testdata');
 

@@ -1,10 +1,10 @@
 
 var run = function() {
-  bitcore = typeof (bitcore) === 'undefined' ? require('../bitcore') : bitcore;
+  dogecore = typeof (dogecore) === 'undefined' ? require('../dogecore') : dogecore;
   var networks = require('../networks');
-  var WalletKey = bitcore.WalletKey;
-  var Script = bitcore.Script;
-  var Builder = bitcore.TransactionBuilder;
+  var WalletKey = dogecore.WalletKey;
+  var Script = dogecore.Script;
+  var Builder = dogecore.TransactionBuilder;
   var opts = {network: networks.testnet};
 
   console.log('## Network: ' + opts.network.name);
@@ -38,7 +38,7 @@ var run = function() {
   privs.forEach(function(p) {
     var wk = new WalletKey(opts);
     wk.fromObj({priv: p});
-    pubkeys.push(bitcore.buffertools.toHex(wk.privKey.public));
+    pubkeys.push(dogecore.buffertools.toHex(wk.privKey.public));
   });
 
 
@@ -50,7 +50,7 @@ var run = function() {
     .build();
   var txHex =  tx.serialize().toString('hex');
   console.log('1) SEND TO MULSISIG TX: ', txHex);
-  console.log('[this example originally generated TXID: e4bc22d8c519d3cf848d710619f8480be56176a4a6548dfbe865ab3886b578b5 on testnet]\n\n\thttp://test.bitcore.io/tx/e4bc22d8c519d3cf848d710619f8480be56176a4a6548dfbe865ab3886b578b5\n\n');
+  console.log('[this example originally generated TXID: e4bc22d8c519d3cf848d710619f8480be56176a4a6548dfbe865ab3886b578b5 on testnet]\n\n\thttp://test.dogecore.io/tx/e4bc22d8c519d3cf848d710619f8480be56176a4a6548dfbe865ab3886b578b5\n\n');
 
 
   //save scriptPubKey
@@ -86,7 +86,7 @@ var run = function() {
   console.log('2) REDEEM SCRIPT: ', txHex);
 console.log('=> Is signed status:', b.isFullySigned(), tx.countInputMissingSignatures(0) );
 
-  console.log('[this example originally generated TXID: 1eb388977b2de99562eb0fbcc661a100eaffed99c53bfcfebe5a087002039b83 on testnet]\n\n\thttp://test.bitcore.io/tx/1eb388977b2de99562eb0fbcc661a100eaffed99c53bfcfebe5a087002039b83');
+  console.log('[this example originally generated TXID: 1eb388977b2de99562eb0fbcc661a100eaffed99c53bfcfebe5a087002039b83 on testnet]\n\n\thttp://test.dogecore.io/tx/1eb388977b2de99562eb0fbcc661a100eaffed99c53bfcfebe5a087002039b83');
 
 };
 

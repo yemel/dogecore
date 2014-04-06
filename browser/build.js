@@ -58,7 +58,7 @@ var modules = [
   'util/BinaryParser',
 ];
 
-var createBitcore = function(opts) {
+var createDogecore = function(opts) {
 
 
   opts.dir = opts.dir || '';
@@ -81,7 +81,7 @@ var createBitcore = function(opts) {
   var bopts = {
     pack: pack,
     debug: true,
-    standalone: 'bitcore',
+    standalone: 'dogecore',
     insertGlobals: true
   };
   var b = browserify(bopts);
@@ -98,8 +98,8 @@ var createBitcore = function(opts) {
   b.require(opts.dir + 'base58-native', {
     expose: 'base58-native'
   });
-  b.require('./' + opts.dir + 'bitcore', {
-    expose: 'bitcore'
+  b.require('./' + opts.dir + 'dogecore', {
+    expose: 'dogecore'
   });
   modules.forEach(function(m) {
     if (opts.includeall || opts.submodules.indexOf(m) > -1) {
@@ -155,9 +155,9 @@ if (require.main === module) {
     var testBundle = createTestData(program);
     testBundle.pipe(fs.createWriteStream('browser/testdata.js'));
   }
-  var bitcoreBundle = createBitcore(program);
-  bitcoreBundle.pipe(program.stdout ? process.stdout : fs.createWriteStream('browser/bundle.js'));
+  var dogecoreBundle = createDogecore(program);
+  dogecoreBundle.pipe(program.stdout ? process.stdout : fs.createWriteStream('browser/bundle.js'));
 }
 
-module.exports.createBitcore = createBitcore;
+module.exports.createDogecore = createDogecore;
 module.exports.createTestData = createTestData;

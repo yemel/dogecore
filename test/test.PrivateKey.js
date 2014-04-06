@@ -1,14 +1,14 @@
 'use strict';
 
 var chai = chai || require('chai');
-var bitcore = bitcore || require('../bitcore');
+var dogecore = dogecore || require('../dogecore');
 
 var should = chai.should();
 
-var PrivateKeyModule = bitcore.PrivateKey;
+var PrivateKeyModule = dogecore.PrivateKey;
 var PrivateKey;
 
-var networks = bitcore.networks;
+var networks = dogecore.networks;
 
 describe('PrivateKey', function() {
   it('should initialze the main object', function() {

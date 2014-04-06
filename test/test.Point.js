@@ -1,16 +1,16 @@
 'use strict';
 
 var chai = chai || require('chai');
-var bitcore = bitcore || require('../bitcore');
-var coinUtil = coinUtil || bitcore.util;
+var dogecore = dogecore || require('../dogecore');
+var coinUtil = coinUtil || dogecore.util;
 var buffertools = require('buffertools');
 var bignum = require('bignum');
 
 var should = chai.should();
 var assert = chai.assert;
 
-var Point = bitcore.Point;
-var Key = bitcore.Key;
+var Point = dogecore.Point;
+var Key = dogecore.Key;
 
 describe('Key', function() {
 

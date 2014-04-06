@@ -1,40 +1,40 @@
 'use strict';
 
 var chai = chai || require('chai');
-var bitcore = bitcore || require('../bitcore');
+var dogecore = dogecore || require('../dogecore');
 var buffertools = require('buffertools');
 
 var should = chai.should();
 
 var testdata = testdata || require('./testdata');
 
-var bignum = bitcore.bignum;
-var base58 = bitcore.base58;
+var bignum = dogecore.bignum;
+var base58 = dogecore.base58;
 var base58Check = base58.base58Check;
 
-var Address = bitcore.Address;
-var networks = bitcore.networks;
-var WalletKey = bitcore.WalletKey;
+var Address = dogecore.Address;
+var networks = dogecore.networks;
+var WalletKey = dogecore.WalletKey;
 
 describe('Miscelaneous stuff', function() {
   it('should initialze the config object', function() {
-    should.exist(bitcore.config);
+    should.exist(dogecore.config);
   });
   it('should initialze the log object', function() {
-    should.exist(bitcore.log);
+    should.exist(dogecore.log);
   });
   it('should initialze the const object', function() {
-    should.exist(bitcore.const);
+    should.exist(dogecore.const);
   });
   it('should initialze the Deserialize object', function() {
-    should.exist(bitcore.Deserialize);
-    should.exist(bitcore.Deserialize.intFromCompact);
+    should.exist(dogecore.Deserialize);
+    should.exist(dogecore.Deserialize.intFromCompact);
   });
 
 
   // bignum
   it('should initialze the bignum object', function() {
-    should.exist(bitcore.bignum);
+    should.exist(dogecore.bignum);
   });
   it('should create a bignum from string', function() {
     var n = bignum('9832087987979879879879879879879879879879879879');
@@ -49,7 +49,7 @@ describe('Miscelaneous stuff', function() {
 
   // base58
   it('should initialze the base58 object', function() {
-    should.exist(bitcore.base58);
+    should.exist(dogecore.base58);
   });
   it('should obtain the same string in base58 roundtrip', function() {
     var m = 'mqqa8xSMVDyf9QxihGnPtap6Mh6qemUkcu';

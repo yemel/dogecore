@@ -2,7 +2,7 @@
 
 
 var run = function() {
-  bitcore = typeof (bitcore) === 'undefined' ? require('../bitcore') : bitcore;
+  dogecore = typeof (dogecore) === 'undefined' ? require('../dogecore') : dogecore;
 
   var priv    = 'cTgGUrcro89yUtKeG6gHBAS14r3qp25KwTTxG9d4kEzcFxecuZDm';
   var amt     = '0.005';
@@ -26,7 +26,7 @@ var run = function() {
   var outs = [{address:toAddress, amount:amt}];
   var keys = [priv];
   var opts = {remainderAddress: changeAddressString};
-  var Builder = bitcore.TransactionBuilder;
+  var Builder = dogecore.TransactionBuilder;
 
   var tx = new Builder(opts)
     .setUnspent(utxos)
@@ -36,7 +36,7 @@ var run = function() {
 
    /* create and signing can be done in multiple steps using:
     *
-    *  var builder = new bitcore.TransactionBuilder(opts)
+    *  var builder = new dogecore.TransactionBuilder(opts)
     *             .setUnspent(utxos) 
     *             .setOutputs(outs);
     *

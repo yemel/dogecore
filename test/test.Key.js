@@ -1,13 +1,13 @@
 
 var chai = chai || require('chai');
-var bitcore = bitcore || require('../bitcore');
-var coinUtil = coinUtil || bitcore.util;
+var dogecore = dogecore || require('../dogecore');
+var coinUtil = coinUtil || dogecore.util;
 var buffertools = require('buffertools');
 
 var should = chai.should();
 var assert = chai.assert;
 
-var Key = bitcore.Key;
+var Key = dogecore.Key;
 describe('Key', function() {
   it('should initialize the main object', function() {
     should.exist(Key);
@@ -56,7 +56,7 @@ describe('Key', function() {
     k.regenerateSync();
 
     k.compressed.should.equal(true);
-    var pHex = bitcore.buffertools.toHex(k.public);
+    var pHex = dogecore.buffertools.toHex(k.public);
     pHex.should.equal('0394615227fd5ff4d4dfac88cf148e43d35a7a059788dd2479f60cea807b09d0c2');
   });
 
@@ -101,7 +101,7 @@ describe('Key', function() {
     var k = new Key();
     k.private = new Buffer('876156ccb16bb1760ddda6ad3e561c026fc0d679ad7860b71dd11c30e42f6589','hex');
     k.regenerateSync();
-    var pHex = bitcore.buffertools.toHex(k.public);
+    var pHex = dogecore.buffertools.toHex(k.public);
     pHex.should.equal('0394615227fd5ff4d4dfac88cf148e43d35a7a059788dd2479f60cea807b09d0c2');
     var a_hash = new Buffer('ce42c5c7f405461c38ea849130f51e48531ab3188390a21a15aeaa1faedbf0b2','hex');
     var sig= new Buffer('304602210099f689f846a1590cf57f9cede2fe841d8552f114bc9e5f5603a333b00e69d3fa022100e83604ddd5f1ce6f5add3ac8da7dbf17f3ffe5b47205f3899caeaa54abdbcf07','hex');

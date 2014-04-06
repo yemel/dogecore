@@ -1,11 +1,11 @@
 'use strict';
 
 var chai = chai || require('chai');
-var bitcore = bitcore || require('../bitcore');
+var dogecore = dogecore || require('../dogecore');
 
 var should = chai.should();
 
-var EncodedDataModule = bitcore.EncodedData;
+var EncodedDataModule = dogecore.EncodedData;
 var EncodedData;
 
 describe('EncodedData', function() {

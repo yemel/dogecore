@@ -1,9 +1,9 @@
 'use strict';
 
 var run = function() {
-  // Replace '../bitcore' with 'bitcore' if you use this code elsewhere.
-  var bitcore = require('../bitcore');
-  var RpcClient = bitcore.RpcClient;
+  // Replace '../dogecore' with 'dogecore' if you use this code elsewhere.
+  var dogecore = require('../dogecore');
+  var RpcClient = dogecore.RpcClient;
   var hash = '0000000000b6288775bbd326bedf324ca8717a15191da58391535408205aada4';
 
   var config = {

@@ -1,6 +1,6 @@
 'use strict';
 if (typeof process === 'undefined') {
-  var bitcore = require('bitcore');
+  var dogecore = require('dogecore');
   var testdata = require('testdata');
-  var Buffer = bitcore.Buffer;
+  var Buffer = dogecore.Buffer;
 } 

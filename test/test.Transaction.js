@@ -2,15 +2,15 @@
 
 var chai = chai || require('chai');
 chai.Assertion.includeStack = true;
-var bitcore = bitcore || require('../bitcore');
+var dogecore = dogecore || require('../dogecore');
 
 var should = chai.should();
 
-var Transaction = bitcore.Transaction;
+var Transaction = dogecore.Transaction;
 var In;
 var Out;
-var Script = bitcore.Script;
-var util = bitcore.util;
+var Script = dogecore.Script;
+var util = dogecore.util;
 var buffertools = require('buffertools');
 var testdata = testdata || require('./testdata');
 

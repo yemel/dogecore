@@ -1,9 +1,9 @@
 var run = function() {
-  bitcore = typeof (bitcore) === 'undefined' ? require('../bitcore') : bitcore;
-  var BIP32 = bitcore.BIP32;
-  var Address = bitcore.Address;
-  var networks = bitcore.networks;
-  var coinUtil = bitcore.util;
+  dogecore = typeof (dogecore) === 'undefined' ? require('../dogecore') : dogecore;
+  var BIP32 = dogecore.BIP32;
+  var Address = dogecore.Address;
+  var networks = dogecore.networks;
+  var coinUtil = dogecore.util;
   var crypto = require('crypto');
 
   console.log('BIP32: Hierarchical Deterministic Wallets');

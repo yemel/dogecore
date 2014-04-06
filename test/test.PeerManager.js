@@ -1,11 +1,11 @@
 'use strict';
 
 var chai = chai || require('chai');
-var bitcore = bitcore || require('../bitcore');
+var dogecore = dogecore || require('../dogecore');
 
 var should = chai.should();
 
-var PeerManagerModule = bitcore.PeerManager || require('./PeerManager');
+var PeerManagerModule = dogecore.PeerManager || require('./PeerManager');
 
 var PeerManager;
 

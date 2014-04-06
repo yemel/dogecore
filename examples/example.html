@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bitcore browser examples</title>
+    <title>Dogecore browser examples</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -12,7 +12,7 @@
     <script src="../browser/bundle.js"></script>
 
     <script type="text/javascript">
-      var Address = require('bitcore').Address;
+      var Address = require('dogecore').Address;
 
       print = function(s,s2,s3){
         var div = document.getElementById('content');
@@ -41,40 +41,40 @@
       });
       print('<hr> <h1>Key</h1>' );
 /*
-      Using bitcore root module
+      Using dogecore root module
 */
-      var bitcore = require('bitcore');
-      var k = bitcore.Key.generateSync();
+      var dogecore = require('dogecore');
+      var k = dogecore.Key.generateSync();
       print ('Generate Key Pair:');
-      print ('Private:' + bitcore.buffertools.toHex(k.private));
-      print ('Public:'  + bitcore.buffertools.toHex(k.public));
+      print ('Private:' + dogecore.buffertools.toHex(k.private));
+      print ('Public:'  + dogecore.buffertools.toHex(k.public));
 
       print('<hr> <h1>Util</h1>' );
-      var coinUtil = bitcore.util;
+      var coinUtil = dogecore.util;
  
       var pk = '03d95e184cce34c3cfa58e9a277a09a7c5ed1b2a8134ea1e52887bc66fa3f47071'
 
       var pubKeyHash = coinUtil.sha256(pk);
-      print(bitcore.buffertools.toHex(pubKeyHash));
+      print(dogecore.buffertools.toHex(pubKeyHash));
       pubKeyHash = coinUtil.sha256ripe160(pk);
-      print(bitcore.buffertools.toHex(pubKeyHash));
+      print(dogecore.buffertools.toHex(pubKeyHash));
 
 
-      var Buffer = bitcore.Buffer;
+      var Buffer = dogecore.Buffer;
 
-      pubKeyHash = coinUtil.ripe160(new bitcore.Buffer('hola'));
-      print(bitcore.buffertools.toHex(pubKeyHash)); 
+      pubKeyHash = coinUtil.ripe160(new dogecore.Buffer('hola'));
+      print(dogecore.buffertools.toHex(pubKeyHash)); 
 
       var bu = new Buffer('a5c756101065ac5b8f689139e6d856fa99e54b5000b6428b43729d334cc9277d', 'hex');
-      print(bitcore.buffertools.toHex(bu));
+      print(dogecore.buffertools.toHex(bu));
 
       var pubKeyHash2 = coinUtil.ripe160(bu);
-      print(bitcore.buffertools.toHex(pubKeyHash2)); 
+      print(dogecore.buffertools.toHex(pubKeyHash2)); 
 
 
       print('<hr><h1>WalletKey </h1>');
-      var WalletKey = bitcore.WalletKey;
-      var networks  = bitcore.networks;
+      var WalletKey = dogecore.WalletKey;
+      var networks  = dogecore.networks;
 
 
       var priv = 'L4cEVwoNDeYdCQfFJAGkGKPnE2TmqLEuBn4znQChD2ojjQRJVKpU';

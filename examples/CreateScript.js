@@ -1,14 +1,14 @@
 'use strict';
 
 var run = function() {
-  // replace '../bitcore' with 'bitcore' if you use this code elsewhere.
-  var bitcore = require('../bitcore');
+  // replace '../dogecore' with 'dogecore' if you use this code elsewhere.
+  var dogecore = require('../dogecore');
   var networks = require('../networks');
-  var Script = bitcore.Script;
-  var WalletKey = bitcore.WalletKey;
-  var buffertools = bitcore.buffertools;
-  var Address = bitcore.Address;
-  var util = bitcore.util;
+  var Script = dogecore.Script;
+  var WalletKey = dogecore.WalletKey;
+  var buffertools = dogecore.buffertools;
+  var Address = dogecore.Address;
+  var util = dogecore.util;
   var opts = {network: networks.testnet};
 
   var p = console.log;

@@ -3,10 +3,10 @@
 
 
 var run = function() {
-  // replace '../bitcore' with 'bitcore' if you use this code elsewhere.
-  var bitcore = require('../bitcore');
+  // replace '../dogecore' with 'dogecore' if you use this code elsewhere.
+  var dogecore = require('../dogecore');
   var networks = require('../networks');
-  var WalletKey = bitcore.WalletKey;
+  var WalletKey = dogecore.WalletKey;
 
   var opts = {network: networks.testnet};
 
@@ -14,8 +14,8 @@ var run = function() {
 
     console.log('\n## Network: ' + wk.network.name);
     console.log ('\t * Hex Representation');
-    console.log ('\tPrivate: ' + bitcore.buffertools.toHex(wk.privKey.private));
-    console.log ('\tPublic : ' + bitcore.buffertools.toHex(wk.privKey.public));
+    console.log ('\tPrivate: ' + dogecore.buffertools.toHex(wk.privKey.private));
+    console.log ('\tPublic : ' + dogecore.buffertools.toHex(wk.privKey.public));
     console.log ('\tPublic Compressed : ' + (wk.privKey.compressed?'Yes':'No'));
 
     var wkObj = wk.storeObj();

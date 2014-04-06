@@ -1,12 +1,12 @@
 'use strict';
 
 var run = function() {
-  // Replace '../bitcore' with 'bitcore' if you use this code elsewhere.
-  var bitcore = require('../bitcore');
-  var Address = bitcore.Address;
-  var coinUtil = bitcore.util;
-  var Script = bitcore.Script;
-  var network = bitcore.networks.testnet;
+  // Replace '../dogecore' with 'dogecore' if you use this code elsewhere.
+  var dogecore = require('../dogecore');
+  var Address = dogecore.Address;
+  var coinUtil = dogecore.util;
+  var Script = dogecore.Script;
+  var network = dogecore.networks.testnet;
 
   var getAddrStr = function(s) {
     var addrStrs = [];

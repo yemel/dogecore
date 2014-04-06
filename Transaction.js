@@ -382,7 +382,7 @@ TransactionSignatureSerializer.prototype.buffer = function() {
 Transaction.Serializer = TransactionSignatureSerializer;
 
 var oneBuffer = function() {
-  // bug present in bitcoind which must be also present in bitcore
+  // bug present in bitcoind which must be also present in dogecore
   // see https://bitcointalk.org/index.php?topic=260595
   var ret = new Buffer(32);
   ret.writeUInt8(1, 0);

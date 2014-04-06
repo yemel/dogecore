@@ -1,15 +1,15 @@
 'use strict';
 
 var chai = chai || require('chai');
-var bitcore = bitcore || require('../bitcore');
-var coinUtil = bitcore.util;
+var dogecore = dogecore || require('../dogecore');
+var coinUtil = dogecore.util;
 var should = chai.should();
 var buffertools = require('buffertools');
 
 describe('util', function() {
   describe('exist', function() {
     it('should initialze the util object', function() {
-      should.exist(bitcore.util);
+      should.exist(dogecore.util);
     });
   });
   describe('#parseValue', function() {
@@ -80,7 +80,7 @@ describe('util', function() {
     ];
     ripemdData.forEach(function(datum) {
       it('should work for ' + datum[0], function() {
-        var r = coinUtil.ripe160(new bitcore.Buffer(datum[0]));
+        var r = coinUtil.ripe160(new dogecore.Buffer(datum[0]));
         buffertools.toHex(r).should.equal(datum[1]);
       });
       it('should work for Buffer ' + datum[0], function() {

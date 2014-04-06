@@ -1,14 +1,14 @@
 'use strict';
 
 var chai = chai || require('chai');
-var bitcore = bitcore || require('../bitcore');
+var dogecore = dogecore || require('../dogecore');
 var buffertools = require('buffertools');
 
 var should = chai.should();
 var testdata = testdata || require('./testdata');
 
-var Script = bitcore.Script;
-var ScriptInterpreter = bitcore.ScriptInterpreter;
+var Script = dogecore.Script;
+var ScriptInterpreter = dogecore.ScriptInterpreter;
 
 describe('ScriptInterpreter', function() {
   it('should initialze the main object', function() {

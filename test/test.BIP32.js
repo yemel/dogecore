@@ -2,8 +2,8 @@
 
 var chai = chai || require('chai');
 var should = chai.should();
-var bitcore = bitcore || require('../bitcore');
-var BIP32 = bitcore.BIP32;
+var dogecore = dogecore || require('../dogecore');
+var BIP32 = dogecore.BIP32;
 
 describe('BIP32', function() {
 

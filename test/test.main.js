@@ -1,13 +1,13 @@
 'use strict';
 
 var chai = chai || require('chai');
-var bitcore = bitcore || require('../bitcore');
+var dogecore = dogecore || require('../dogecore');
 
 var expect = chai.expect;
 var should = chai.should();
 
-describe('Initialization of bitcore', function() {
+describe('Initialization of dogecore', function() {
   it('should initialze the main object', function() {
-    should.exist(bitcore);
+    should.exist(dogecore);
   });
 });

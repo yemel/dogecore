@@ -1,9 +1,9 @@
 var run = function() {
-  bitcore = typeof (bitcore) === 'undefined' ? require('../bitcore') : bitcore;
+  dogecore = typeof (dogecore) === 'undefined' ? require('../dogecore') : dogecore;
   var networks = require('../networks');
-  var WalletKey = bitcore.WalletKey;
-  var Script = bitcore.Script;
-  var Builder = bitcore.TransactionBuilder;
+  var WalletKey = dogecore.WalletKey;
+  var Script = dogecore.Script;
+  var Builder = dogecore.TransactionBuilder;
   var opts = {network: networks.testnet};
 
   console.log('## Network: ' + opts.network.name);
@@ -37,7 +37,7 @@ var run = function() {
   privs.forEach(function(p) {
     var wk = new WalletKey(opts);
     wk.fromObj({priv: p});
-    pubkeys.push(bitcore.buffertools.toHex(wk.privKey.public));
+    pubkeys.push(dogecore.buffertools.toHex(wk.privKey.public));
   });
 
   // multisig p2sh
@@ -63,7 +63,7 @@ var run = function() {
 
   console.log('## p2sh address: ' + p2shAddress); //TODO
   console.log('\n1) SEND TO P2SH TX: ', txHex);
-  console.log('[this example originally generated TXID: c2e50d1c8c581d8c4408378b751633f7eb86687fc5f0502be7b467173f275ae7 on testnet]\n\n\thttp://test.bitcore.io/tx/c2e50d1c8c581d8c4408378b751633f7eb86687fc5f0502be7b467173f275ae7\n\n');
+  console.log('[this example originally generated TXID: c2e50d1c8c581d8c4408378b751633f7eb86687fc5f0502be7b467173f275ae7 on testnet]\n\n\thttp://test.dogecore.io/tx/c2e50d1c8c581d8c4408378b751633f7eb86687fc5f0502be7b467173f275ae7\n\n');
 
   //save scriptPubKey
   var scriptPubKey = tx.outs[0].s.toString('hex');
@@ -107,11 +107,11 @@ console.log('\t #isComplete:' + tx.isComplete() );
 
   var txHex =  tx.serialize().toString('hex');
   console.log('2) REDEEM SCRIPT: ', txHex);
-  console.log('[this example originally generated TXID: 8284aa3b6f9c71c35ecb1d61d05ae78c8ca1f36940eaa615b50584dfc3d95cb7 on testnet]\n\n\thttp://test.bitcore.io/tx/8284aa3b6f9c71c35ecb1d61d05ae78c8ca1f36940eaa615b50584dfc3d95cb7\n\n');
+  console.log('[this example originally generated TXID: 8284aa3b6f9c71c35ecb1d61d05ae78c8ca1f36940eaa615b50584dfc3d95cb7 on testnet]\n\n\thttp://test.dogecore.io/tx/8284aa3b6f9c71c35ecb1d61d05ae78c8ca1f36940eaa615b50584dfc3d95cb7\n\n');
 
 /*
   // To send TX with RPC:
-  var RpcClient = bitcore.RpcClient;
+  var RpcClient = dogecore.RpcClient;
   var config = {
     protocol: 'http',
     user: 'user',

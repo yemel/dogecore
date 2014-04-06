@@ -5,12 +5,12 @@
 
 var chai = chai || require('chai');
 var should = chai.should();
-var bitcore = bitcore || require('../bitcore');
-var Transaction = bitcore.Transaction;
-var Script = bitcore.Script;
-var Opcode = bitcore.Opcode;
-var util = bitcore.util;
-var Put = bitcore.Put;
+var dogecore = dogecore || require('../dogecore');
+var Transaction = dogecore.Transaction;
+var Script = dogecore.Script;
+var Opcode = dogecore.Opcode;
+var util = dogecore.util;
+var Put = dogecore.Put;
 var Put = require('bufferput');
 var buffertools = require('buffertools');
 var testdata = testdata || require('./testdata');
@@ -96,7 +96,7 @@ var randomTx = function(single) {
 
 
 var oneBuffer = function() {
-  // bug present in bitcoind which must be also present in bitcore
+  // bug present in bitcoind which must be also present in dogecore
   // see https://bitcointalk.org/index.php?topic=260595
   var ret = new Buffer(32);
   ret.writeUInt8(1, 0);

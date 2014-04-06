@@ -2,9 +2,9 @@
 
 
 var run = function() {
-  // Replace '../bitcore' with 'bitcore' if you use this code elsewhere.
-  var bitcore = require('../bitcore');
-  var Address = bitcore.Address;
+  // Replace '../dogecore' with 'dogecore' if you use this code elsewhere.
+  var dogecore = require('../dogecore');
+  var Address = dogecore.Address;
 
   var addrs = [
     '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa',

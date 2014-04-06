@@ -2,18 +2,18 @@
 
 var chai = chai || require('chai');
 chai.Assertion.includeStack = true;
-var bitcore = bitcore || require('../bitcore');
+var dogecore = dogecore || require('../dogecore');
 
 var should = chai.should();
 
-var Transaction = bitcore.Transaction;
-var TransactionBuilder = bitcore.TransactionBuilder;
+var Transaction = dogecore.Transaction;
+var TransactionBuilder = dogecore.TransactionBuilder;
 var In;
 var Out;
-var Script = bitcore.Script;
-var WalletKey = bitcore.WalletKey;
-var util = bitcore.util;
-var networks = bitcore.networks;
+var Script = dogecore.Script;
+var WalletKey = dogecore.WalletKey;
+var util = dogecore.util;
+var networks = dogecore.networks;
 var buffertools = require('buffertools');
 var testdata = testdata || require('./testdata');
 
@@ -547,7 +547,7 @@ describe('TransactionBuilder', function() {
     privs.forEach(function(p) {
       var wk = new WalletKey({network: networks.testnet});
       wk.fromObj({priv: p});
-      pubkeys.push(bitcore.buffertools.toHex(wk.privKey.public));
+      pubkeys.push(dogecore.buffertools.toHex(wk.privKey.public));
     });
 
     return {

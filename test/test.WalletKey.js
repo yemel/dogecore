@@ -1,12 +1,12 @@
 'use strict';
 
 var chai = chai || require('chai');
-var bitcore = bitcore || require('../bitcore');
+var dogecore = dogecore || require('../dogecore');
 
 var should = chai.should();
 
-var WalletKeyModule = bitcore.WalletKey;
-var networks = bitcore.networks;
+var WalletKeyModule = dogecore.WalletKey;
+var networks = dogecore.networks;
 var WalletKey;
 
 describe('WalletKey', function() {

@@ -1,10 +1,10 @@
 'use strict';
 
 var run = function() {
-  // Replace '../bitcore' with 'bitcore' if you use this code elsewhere.
-  var bitcore = require('../bitcore');
-  var networks = bitcore.networks;
-  var Peer = bitcore.Peer;
+  // Replace '../dogecore' with 'dogecore' if you use this code elsewhere.
+  var dogecore = require('../dogecore');
+  var networks = dogecore.networks;
+  var Peer = dogecore.Peer;
   var PeerManager = require('soop').load('../PeerManager', {
     network: networks.testnet
   });

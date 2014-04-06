@@ -1,10 +1,10 @@
 'use strict';
 
 var chai = chai || require('chai');
-var bitcore = bitcore || require('../bitcore');
+var dogecore = dogecore || require('../dogecore');
 var should = chai.should();
 
-var SINKeyModule = bitcore.SINKey;
+var SINKeyModule = dogecore.SINKey;
 var SINKey;
 
 
